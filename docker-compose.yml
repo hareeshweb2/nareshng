@@ -1,0 +1,16 @@
+version: '3'
+services:
+    node:
+      container_name: nodeapp
+      build: .
+      environment:
+        PORTAL_ENVIRONMENT: "qa"
+      ports:
+        - '8080:80'
+#       networks:
+#         - toolslocaldev_default
+#
+# networks:
+#   toolslocaldev_default:
+#     external:
+#       name: toolslocaldev_default
